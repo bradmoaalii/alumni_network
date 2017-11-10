@@ -5,14 +5,28 @@
 <table>
   <% @users.each do |user| %>
     <tr>
+      
       <td>
         <%= user.email %>
       </td>
+     
       <td>
         <%= user.approved %>
       </td>
+      
       <td>
         <%= link_to "Edit", edit_user_registration_path(user) %>
+      </td>
+      
+      <td>
+        <%= link_to profile.status, toggle_status_path(profile) %>
+      </td>
+      <td>
+        <%= link_to profile.active, toggle_active_path(profile) %>
+      </td>
+      
+      <td>
+        <%= link_to profile.work, toggle_work_path(profile) %>
       </td>
     </tr>
   <% end %>

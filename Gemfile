@@ -57,4 +57,4 @@ gem 'materialize-sass'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'devise', '~> 4.3'
 gem 'petergate', '~> 1.8'
-
+gem 'faker', '~> 1.8', '>= 1.8.4'

@@ -1,4 +1,5 @@
 class ProfilesController < ApplicationController
+
 	def toggle_status
 		if @profile.alumni
 			@profile.student
@@ -26,4 +27,5 @@ class ProfilesController < ApplicationController
 			@profile.full_time
 		end
 	end
+
 end

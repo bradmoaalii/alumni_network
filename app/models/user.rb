@@ -7,7 +7,7 @@ class User < ApplicationRecord
   petergate(roles: [:admin], multiple: false)                                      ##
   ############################################################################################ 
  
-  has_one :profile
+  has_one :profile, dependent: :destroy
   has_many :notices
 
   # Include default devise modules. Others available are:

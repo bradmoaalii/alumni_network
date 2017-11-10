@@ -1,5 +1,5 @@
 30.times do |user|
-    user = User.create(
+    @user = User.create(
             email: Faker::Internet.email,
             password: "password",
             password_confirmation: "password",
@@ -8,7 +8,7 @@
     )
 
     Profile.create(
-        users_id: user.id, 
+        users_id: @user.id, 
         img: "http://via.placeholder.com/150x150",
         name: Faker::StarWars.character,
         about: Faker::StarWars.quote,
@@ -23,7 +23,7 @@
 end
 
 5.times do |admin|
-    user = User.create(
+    @user = User.create(
             email: "admin#{admin+1}@test.com",
             password: "password",
             password_confirmation: "password",
@@ -32,7 +32,7 @@ end
     )
 
     Profile.create(
-        users_id: user.id, 
+        users_id: @user.id, 
         img: "http://via.placeholder.com/150x150",
         name: Faker::StarWars.character,
         about: Faker::StarWars.quote,
